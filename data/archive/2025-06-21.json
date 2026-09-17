@@ -1,0 +1,75 @@
+{
+  "id": 3,
+  "brief_date": "2025-06-21",
+  "title": "2025年6月21日时政晨读 | 国家&深圳官方要闻·道法学科适配版",
+  "national": [
+    {
+      "title": "平陆运河建成通航 打造国家级综合战略工程",
+      "source": "人民网",
+      "summary": "2026年9月16日，新中国成立以来首条通江达海的运河平陆运河正式通航，作为集航运、开放、经济、安全、生态于一体的国家级工程，采用全生命周期数字化管理模式，多项指标达世界之最，将深刻改变西南地区开放发展格局，服务国内国际双循环。",
+      "image_url": "http://finance.people.com.cn/NMediaFile/2026/0916/MAIN1789535121747K5NUEIY5FP.jpg",
+      "source_url": "http://finance.people.com.cn/GB/index3.html",
+      "literacy_tag": "政治认同、责任意识",
+      "textbook_unit": "九年级上册 第三单元 文明与家园·第四单元 和谐与梦想（资料待完善，为课标通用对应）",
+      "capability_tag": "阐释与论证、探究与建构"
+    },
+    {
+      "title": "最高检全链条摧毁跨境偷拍敲诈黑网 严打民生领域违法犯罪",
+      "source": "新华网",
+      "summary": "2026年3月警方破获酒店偷拍跨境敲诈案件，同时针对玉米品种侵权案判赔超5300万元，最高检表示将持续优化检务公开，积极回应社会关切，严厉打击侵害群众权益、侵犯知识产权等违法犯罪行为。",
+      "image_url": "http://news.cn/legal/20260915/08ffbcc04648402b91893c2464a80207/421abd485b7f49b7adb196c457e547b1.jpg",
+      "source_url": "http://news.cn/legal/?vaa7y%3Ftag=1fwvd",
+      "literacy_tag": "法治观念、道德修养",
+      "textbook_unit": "八年级上册 第五课 做守法的公民·八年级下册 第六课 我国国家机构（资料待完善，为课标通用对应）",
+      "capability_tag": "辨识与判断、阐释与论证"
+    },
+    {
+      "title": "香港特区深化反贪与国安协作 筑牢廉洁安全屏障",
+      "source": "新华网",
+      "summary": "2026年全民国家安全教育日前夕，香港廉政专员表示将深化“执法、防贪、教育”三管齐下策略，主动对接科技发展，深化与内地协作，在筑牢香港廉洁屏障的同时，共同维护国家安全。",
+      "image_url": "http://news.cn/gangao/20260915/ffe6a49a3c9e4963ab9164269d9e8357/df87ffb7195a427991f0d91b7bed2172.jpg",
+      "source_url": "http://news.cn/gangao/index.html",
+      "literacy_tag": "政治认同、责任意识",
+      "textbook_unit": "九年级上册 第四单元 和谐与梦想·八年级下册 第七课 尊重自由平等（资料待完善，为课标通用对应）",
+      "capability_tag": "辨识与判断、阐释与论证"
+    }
+  ],
+  "shenzhen": [
+    {
+      "title": "省委书记黄坤明到深圳调研 推动特区高质量发展",
+      "source": "深圳新闻网",
+      "summary": "2026年9月，广东省委书记黄坤明到深圳高科技企业调研并主持召开座谈会，强调要推进高质量发展、现代化建设，奋力把新时代经济特区办得更好、办出更高水平。",
+      "image_url": "https://www.sznews.com/zhuanti/pic/2025-01/16/31906679_d51ca5c6-311b-4a4f-83e3-a8afa1c830eb.png",
+      "source_url": "http://sznews.com/?agcjm",
+      "literacy_tag": "政治认同、责任意识",
+      "textbook_unit": "九年级上册 第一课 踏上强国之路·第二课 创新驱动发展（资料待完善，为课标通用对应）",
+      "capability_tag": "探究与建构、阐释与论证"
+    },
+    {
+      "title": "深圳发布未来五年民生健康规划 覆盖生育养老就医全链条",
+      "source": "深圳新闻网",
+      "summary": "深圳发布民生健康重磅规划，未来五年将实现生育、养老、就医全领域覆盖，持续提升公共服务保障水平，增强市民获得感、幸福感、安全感。",
+      "image_url": "https://www.sznews.com/zhuanti/pic/2025-01/16/31906679_d51ca5c6-311b-4a4f-83e3-a8afa1c830eb.png",
+      "source_url": "http://sznews.com/?teimu",
+      "literacy_tag": "健全人格、责任意识",
+      "textbook_unit": "七年级下册 第四单元 走进法治天地·九年级上册 第三单元 文明与家园（资料待完善，为课标通用对应）",
+      "capability_tag": "辨识与判断、阐释与论证"
+    },
+    {
+      "title": "深圳推进政务建筑升级 打造“鸿蒙+AI+低碳”示范IP",
+      "source": "深圳新闻网",
+      "summary": "深圳启动政务建筑改造项目，融合鸿蒙系统、人工智能、低碳技术，打造智慧政务新标杆，提升政务服务效率，践行绿色发展理念。",
+      "image_url": "https://www.sznews.com/zhuanti/pic/2025-01/16/31906679_d51ca5c6-311b-4a4f-83e3-a8afa1c830eb.png",
+      "source_url": "http://sznews.com/?id=exb38666",
+      "literacy_tag": "政治认同、创新意识",
+      "textbook_unit": "九年级上册 第二课 创新驱动发展·第三单元 文明与家园（资料待完善，为课标通用对应）",
+      "capability_tag": "探究与建构、阐释与论证"
+    }
+  ],
+  "quick_notes": [
+    "国家重大工程支撑新发展格局，科技创新是高质量发展的核心动力",
+    "法治建设守护民生权益，国家安全是发展的前提基础",
+    "深圳特区先行示范，民生保障与智慧绿色发展协同推进"
+  ],
+  "questions": []
+}
