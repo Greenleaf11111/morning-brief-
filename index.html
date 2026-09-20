@@ -42,10 +42,16 @@
   .card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:22px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:.25s;position:relative}
   .card::before{content:'';position:absolute;left:0;top:0;right:0;height:4px;background:linear-gradient(90deg,var(--brand),var(--sub),var(--accent));opacity:.9}
   .card:hover{box-shadow:var(--shadow-hover);transform:translateY(-3px)}
-  .card .img{width:100%;height:168px;object-fit:cover;border-radius:14px;background:#eef0f7;margin-bottom:14px;display:block}
+  .card .img{width:100%;height:150px;object-fit:cover;border-radius:14px;background:#eef0f7;margin-bottom:14px;display:block;flex:none}
   .card.noimg .img{display:none}
-  .card h3{font-size:21px;font-weight:800;line-height:1.45;margin-bottom:10px}
-  .card .sum{font-size:16px;color:#484b63;margin-bottom:12px;flex:1;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+  .card h3{font-size:20px;font-weight:800;line-height:1.45;margin-bottom:10px;flex:none}
+  /* ③ 正文区域：完整显示，超长时卡片内部出现滚动条，双栏高度对称由下方 .car 约束 */
+  .card .sum{font-size:15.5px;color:#484b63;margin-bottom:12px;flex:1 1 auto;min-height:0;overflow-y:auto;overflow-x:hidden;padding-right:6px;-webkit-overflow-scrolling:touch}
+  .card .sum::-webkit-scrollbar{width:5px}
+  .card .sum::-webkit-scrollbar-thumb{background:#cfd5ea;border-radius:6px}
+  .card .sum::-webkit-scrollbar-track{background:transparent}
+  .card .tags{flex:none}
+  .card .src{flex:none}
   .tags{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:12px}
   .chip{font-size:13px;border-radius:20px;padding:6px 12px;font-weight:600}
   .chip.purple{background:#f0e9ff;color:var(--purple)}
@@ -58,9 +64,9 @@
   .src a:hover{text-decoration:underline}
 
   /* 轮播（每栏独立：上下滚动播放，国家/深圳左右各自滚动） */
-  .car{position:relative;height:560px;overflow:hidden;border-radius:22px}
+  .car{position:relative;height:640px;overflow:hidden;border-radius:22px}
   .car .track{display:flex;flex-direction:column;transition:transform .7s cubic-bezier(.22,.61,.36,1)}
-  .car .slide{height:560px;box-sizing:border-box}
+  .car .slide{height:640px;box-sizing:border-box}
   .car .slide .card{height:100%;box-sizing:border-box}
   .car .arrows{position:absolute;top:50%;left:0;right:0;transform:translateY(-50%);display:flex;justify-content:space-between;pointer-events:none;z-index:7;padding:0 10px}
   .car .arrow{pointer-events:auto;width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.94);border:1px solid var(--line);color:var(--ink);font-size:20px;cursor:pointer;box-shadow:0 6px 18px rgba(31,35,51,.16);display:flex;align-items:center;justify-content:center;opacity:.92;transition:.18s;line-height:1}
@@ -96,6 +102,26 @@
   .sub-btn{background:linear-gradient(135deg,var(--brand),var(--sub));color:#fff;border:none;border-radius:13px;padding:12px 24px;font-size:15px;font-weight:700;cursor:pointer;margin-top:12px;transition:.15s}
   .sub-btn:hover{box-shadow:0 8px 18px rgba(226,61,90,.35);transform:translateY(-1px)}
   .sub-btn:disabled{opacity:.5;cursor:not-allowed;transform:none;box-shadow:none}
+  .q-actions{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+  .ref-btn{background:#fff;border:1.5px solid var(--accent);color:var(--accent);border-radius:13px;padding:12px 24px;font-size:15px;font-weight:700;cursor:pointer;margin-top:12px;transition:.15s}
+  .ref-btn:hover{background:#eef2ff;transform:translateY(-1px)}
+  .refbox{margin-top:14px;padding:16px 18px;border-radius:13px;background:#f6f8ff;border:1px solid #dbe3fb;font-size:15px;animation:refIn .25s ease}
+  @keyframes refIn{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
+  .ref-hd{font-size:16px;font-weight:800;color:var(--accent);margin-bottom:10px}
+  .ref-sec{margin-bottom:12px}
+  .ref-sec-t{font-weight:700;color:#33417a;margin-bottom:6px}
+  .ref-li{color:#38406b;margin-bottom:5px;white-space:pre-wrap;line-height:1.6}
+  .solo{display:flex;flex-direction:column;gap:8px}
+  .solo-lv{background:#fff;border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:10px;padding:10px 13px}
+  .solo-lv:nth-child(1){border-left-color:#9aa3c2}
+  .solo-lv:nth-child(2){border-left-color:#6f86d6}
+  .solo-lv:nth-child(3){border-left-color:#4a7cf7}
+  .solo-lv:nth-child(4){border-left-color:#7d5af5}
+  .solo-lv:nth-child(5){border-left-color:#b23ad6}
+  .solo-hd{display:flex;align-items:center;justify-content:space-between;gap:8px;color:#1f2333}
+  .solo-hd b{font-size:15px}
+  .solo-score{background:linear-gradient(135deg,var(--accent),#7d5af5);color:#fff;font-size:12px;font-weight:700;padding:2px 10px;border-radius:20px;white-space:nowrap}
+  .solo-desc{font-size:13.5px;color:#5b6289;margin-top:5px;line-height:1.6}
   .feedback{margin-top:14px;padding:15px 18px;border-radius:13px;font-size:15px;white-space:pre-wrap;display:none}
   .feedback.show{display:block}
   .feedback.ok{background:#ecfbf1;border:1px solid #c4ecd5;color:#0d6e3a}
@@ -289,7 +315,9 @@ function renderQ(q){
     inner+=submitBtn(q.index,'提交答案');
   }else{
     inner+='<div class="answer"><textarea id="ta'+q.index+'" placeholder="'+(d.type==='material'?'组织你的答案…（分点作答更清晰）':'谈谈你的看法，可举例子、讲道理…')+'"></textarea></div>';
-    inner+=submitBtn(q.index,'提交我的回答');
+    inner+='<div class="q-actions">'+submitBtn(q.index,'提交我的回答')+
+      '<button class="ref-btn" onclick="toggleRef('+q.index+')">📖 查阅参考答案</button></div>';
+    inner+='<div class="refbox" id="ref'+q.index+'" style="display:none"></div>';
   }
   inner+='<div class="feedback" id="fb'+q.index+'"></div>';
   div.innerHTML=inner;
@@ -320,11 +348,46 @@ function submitQ(i){
     body=q.data.explanation||'';
   }else{
     correct=null;
-    title=(q.data.type==='material'?'📋 参考要点（对照自查）：':'💬 参考视角：');
-    body=(q.data.reference||'') + (q.data.explanation?'\n\n📌 解析：'+q.data.explanation:'');
+    title='📝 已记录你的回答 ✔';
+    body='可点击上方「📖 查阅参考答案」查看参考答案与 SOLO 分层框架，对照自查。';
+    // 自动展开参考答案框
+    var rb=document.getElementById('ref'+q.index); if(rb){rb.innerHTML=refHTML(q); rb.style.display='block';}
   }
   showFeedback(i,title,correct,body);
   var b=fb.querySelector('.fb-title'); if(b){b.textContent=title;}
+}
+// 参考答案 + SOLO 分层框架
+function refHTML(q){
+  var d=q.data, h='';
+  h+='<div class="ref-hd">📖 参考答案</div>';
+  if(d.reference){
+    var ref=Array.isArray(d.reference)?d.reference:[d.reference];
+    h+='<div class="ref-sec"><div class="ref-sec-t">【参考答案】</div>'+
+      ref.map(function(r){return '<div class="ref-li">• '+esc(r)+'</div>';}).join('')+'</div>';
+  }
+  var solo=d.solo;
+  if(solo){
+    var levels=Array.isArray(solo)?solo:(solo.levels||[]);
+    if(levels.length){
+      h+='<div class="ref-sec"><div class="ref-sec-t">🧩 SOLO 分层框架（比照你的回答，看看你处在哪一层）</div>';
+      h+='<div class="solo">'+levels.map(function(lv){
+        var nm=lv.level||lv.name||'';
+        var desc=lv.desc||lv.description||'';
+        var score=lv.score!=null?('<span class="solo-score">'+esc(score)+'</span>'):'';
+        return '<div class="solo-lv"><div class="solo-hd"><b>'+esc(nm)+'</b>'+score+'</div>'+(desc?'<div class="solo-desc">'+esc(desc)+'</div>':'')+'</div>';
+      }).join('')+'</div>';
+    }
+  }
+  if(d.explanation) h+='<div class="ref-sec"><div class="ref-sec-t">📌 解析</div><div class="ref-li">'+esc(d.explanation)+'</div></div>';
+  return h;
+}
+function toggleRef(i){
+  var q=quizzes[i];
+  var rb=q?document.getElementById('ref'+q.index):null;
+  if(!rb) return;
+  if(rb.style.display==='block'){ rb.style.display='none'; return; }
+  rb.innerHTML=refHTML(q);
+  rb.style.display='block';
 }
 function showFeedback(i,title,correct,body){
   var fb=document.getElementById('fb'+qindex2(i));
