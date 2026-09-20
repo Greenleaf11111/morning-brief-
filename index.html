@@ -357,11 +357,28 @@ function submitQ(i){
   var b=fb.querySelector('.fb-title'); if(b){b.textContent=title;}
 }
 // 参考答案 + SOLO 分层框架
+// 参考答案分点：兼容"分点数组" 与 "整段长字符串(①②③)"两种格式
+function splitRef(r){
+  var arr=[];
+  if(Array.isArray(r)){ arr=r.slice(); }
+  else if(r){ arr=[r]; }
+  var out=[];
+  for(var k=0;k<arr.length;k++){
+    var item=String(arr[k]||'');
+    // 若这一条里含多个"①②③"序号，拆成多条
+    var parts=item.split(/(?=[①②③④⑤⑥⑦⑧⑨⑩])/).filter(function(s){return s.trim();});
+    if(parts.length>1){ out=out.concat(parts); }
+    else if(item.trim()){ out.push(item); }
+  }
+  // 去掉纯序号残留行
+  return out.map(function(s){return s.replace(/^[①②③④⑤⑥⑦⑧⑨⑩]+\s*/,'').trim();}).filter(Boolean);
+}
+
 function refHTML(q){
   var d=q.data, h='';
   h+='<div class="ref-hd">📖 参考答案</div>';
   if(d.reference){
-    var ref=Array.isArray(d.reference)?d.reference:[d.reference];
+    var ref=splitRef(d.reference);
     h+='<div class="ref-sec"><div class="ref-sec-t">【参考答案】</div>'+
       ref.map(function(r){return '<div class="ref-li">• '+esc(r)+'</div>';}).join('')+'</div>';
   }
